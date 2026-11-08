@@ -1,0 +1,150 @@
+USE sales_analysis;
+
+
+-- insert values in categories
+INSERT INTO categories (category_name)
+VALUES
+('Electronics'),
+('Clothing'),
+('Home & Kitchen'),
+('Sports'),
+('Books'),
+('Accessories');
+
+-- insert values in customers
+INSERT INTO customers
+(customer_name, email, city, registration_date)
+VALUES
+('Ahmed Ali', 'ahmed@gmail.com', 'Riyadh', '2026-01-10'),
+('Mohammed Saleh', 'mohammed@gmail.com', 'Jeddah', '2026-01-15'),
+('Sara Hassan', 'sara@gmail.com', 'Dammam', '2026-01-20'),
+('Khalid Omar', 'khalid@gmail.com', 'Riyadh', '2026-02-01'),
+('Nora Abdullah', 'nora@gmail.com', 'Abha', '2026-02-05'),
+('Fahad Saad', 'fahad@gmail.com', 'Jeddah', '2026-02-10'),
+('Lama Ahmed', 'lama@gmail.com', 'Makkah', '2026-02-15'),
+('Omar Khalid', 'omar@gmail.com', 'Riyadh', '2026-03-01'),
+('Reem Ali', 'reem@gmail.com', 'Dammam', '2026-03-05'),
+('Yousef Hassan', 'yousef@gmail.com', 'Abha', '2026-03-10');
+
+
+-- insert into products
+INSERT INTO products
+(product_name, category_id, price, cost)
+VALUES
+('Laptop', 1, 3500, 2800),
+('Smartphone', 1, 2500, 1900),
+('Tablet', 1, 1800, 1300),
+('Headphones', 1, 350, 200),
+('Smart Watch', 1, 600, 400),
+
+('T-Shirt', 2, 80, 35),
+('Jeans', 2, 150, 75),
+('Jacket', 2, 250, 130),
+
+('Coffee Maker', 3, 300, 180),
+('Microwave', 3, 550, 400),
+('Blender', 3, 180, 100),
+('Vacuum Cleaner', 3, 700, 500),
+
+('Football', 4, 90, 40),
+('Tennis Racket', 4, 220, 140),
+('Dumbbells', 4, 160, 90),
+
+('SQL Book', 5, 120, 60),
+('Python Book', 5, 100, 45),
+('Data Analysis Book', 5, 150, 70),
+
+('Backpack', 6, 130, 65),
+('Wallet', 6, 75, 30);
+
+
+-- insert values in orders
+INSERT INTO orders
+(customer_id, order_date, order_status)
+VALUES
+(1, '2026-01-15', 'Completed'),
+(2, '2026-01-20', 'Completed'),
+(3, '2026-01-25', 'Completed'),
+(4, '2026-02-02', 'Completed'),
+(5, '2026-02-08', 'Pending'),
+(6, '2026-02-12', 'Completed'),
+(7, '2026-02-18', 'Cancelled'),
+(8, '2026-02-22', 'Completed'),
+(9, '2026-03-03', 'Completed'),
+(10, '2026-03-10', 'Completed'),
+(1, '2026-03-15', 'Completed'),
+(2, '2026-03-20', 'Pending'),
+(3, '2026-04-02', 'Completed'),
+(4, '2026-04-08', 'Completed'),
+(5, '2026-04-12', 'Completed'),
+(6, '2026-04-18', 'Cancelled'),
+(7, '2026-05-01', 'Completed'),
+(8, '2026-05-06', 'Completed'),
+(9, '2026-05-12', 'Pending'),
+(10, '2026-05-20', 'Completed'),
+(1, '2026-06-01', 'Completed'),
+(2, '2026-06-05', 'Completed'),
+(3, '2026-06-12', 'Completed'),
+(4, '2026-06-18', 'Pending'),
+(5, '2026-07-02', 'Completed'),
+(6, '2026-07-10', 'Completed'),
+(7, '2026-07-15', 'Completed'),
+(8, '2026-07-20', 'Cancelled'),
+(9, '2026-08-01', 'Completed'),
+(10, '2026-08-10', 'Completed'); 
+
+
+-- insert values in order items
+INSERT INTO order_items
+(order_id, product_id, quantity, unit_price)
+VALUES
+(1, 1, 1, 3500),
+(1, 4, 2, 350),
+(2, 2, 1, 2500),
+(2, 6, 3, 80),
+(3, 3, 1, 1800),
+(3, 16, 2, 120),
+(4, 5, 2, 600),
+(4, 19, 1, 130),
+(5, 9, 1, 300),
+(5, 11, 2, 180),
+(6, 1, 1, 3500),
+(6, 17, 2, 100),
+(7, 13, 2, 90),
+(8, 10, 1, 550),
+(8, 12, 1, 700),
+(9, 2, 2, 2500),
+(9, 20, 2, 75),
+(10, 7, 2, 150),
+(10, 8, 1, 250),
+(11, 3, 1, 1800),
+(11, 18, 2, 150),
+(12, 14, 1, 220),
+(12, 15, 2, 160),
+(13, 1, 1, 3500),
+(13, 6, 2, 80),
+(14, 4, 3, 350),
+(14, 16, 1, 120),
+(15, 5, 1, 600),
+(15, 19, 2, 130),
+(16, 11, 2, 180),
+(17, 2, 1, 2500),
+(17, 17, 3, 100),
+(18, 9, 2, 300),
+(18, 20, 3, 75),
+(19, 12, 1, 700),
+(20, 10, 2, 550),
+(20, 18, 1, 150),
+(21, 1, 1, 3500),
+(21, 13, 2, 90),
+(22, 3, 2, 1800),
+(22, 7, 1, 150),
+(23, 2, 1, 2500),
+(23, 19, 2, 130),
+(24, 8, 1, 250),
+(25, 5, 2, 600),
+(26, 4, 2, 350),
+(27, 14, 2, 220),
+(28, 15, 3, 160),
+(29, 16, 2, 120),
+(30, 1, 1, 3500);
